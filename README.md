@@ -14,6 +14,9 @@ code目录用来存放你的项目代码
 ### 访问容器
 docker exec -it <container_id> bash
 
+重启容器
+docker restart <container_id>
+
 ### 进入MySQL执行
 docker exec -it <container_id> bash -l, 进入后就可以使用mysql命令连接数据库了.
 
