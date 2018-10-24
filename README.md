@@ -18,3 +18,6 @@ docker exec -it <container_id> bash
 docker exec -it <container_id> bash -l, 进入后就可以使用mysql命令连接数据库了.
 
 mysql -u root -p root
+
+### 监控
+docker stats 监控容器状态
