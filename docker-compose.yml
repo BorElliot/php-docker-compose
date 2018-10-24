@@ -18,8 +18,16 @@ services:
             - ./php.ini:/usr/local/etc/php/php.ini
         networks:
             - code-network
+    composer:
+        image: composer/composer:php7
+        restart: 'no'
+        command: install
+        volumes:
+            - ./code:/code
+        networks: 
+            - code-network
     mysql:
-        image: mysql:latest
+        image: mysql:5.7
         environment:
             - MYSQL_ROOT_PASSWORD=root
             - MYSQL_DATABASE=docker
@@ -27,6 +35,10 @@ services:
             - MYSQL_PASSWORD=YqukX1!m!eBeP
         networks:
             - code-network
+    redis:
+        image: redis:4.0-alpine
+        ports:
+            - "16379:6379"
 
 networks:
     code-network:
