@@ -21,3 +21,7 @@ mysql -u root -p root
 
 ### 监控
 docker stats 监控容器状态
+
+## 问题
+
+composer遇到exited with code 127的时候，需要检查你是否是已root用户运行，是否是内存不够导致的，可以使用docker stats监控进程状态，如果内存不够就添加虚拟内存来解决。
