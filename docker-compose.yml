@@ -21,7 +21,10 @@ services:
     mysql:
         image: mysql:latest
         environment:
-            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_ROOT_PASSWORD: root
+            - MYSQL_DATABASE: docker
+            - MYSQL_USER: docker-container
+            - MYSQL_PASSWORD: YqukX1!m!eBeP
         networks:
             - code-network
 
