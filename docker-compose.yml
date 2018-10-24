@@ -15,7 +15,7 @@ services:
         image: php:fpm
         volumes:
             - ./code:/code
-            - ./php.ini:/usr/local/etc/php/
+            - ./php.ini:/usr/local/etc/php/php.ini
         networks:
             - code-network
     mysql:
