@@ -1,0 +1,30 @@
+# 参考: http://geekyplatypus.com/making-your-dockerised-php-application-even-better/
+version: '2'
+
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - ./code:/code
+            - ./site.conf:/etc/nginx/conf.d/default.conf
+        networks:
+            - code-network
+    php:
+        image: php:fpm
+        volumes:
+            - ./code:/code
+            - ./php.ini:/usr/local/etc/php/
+        networks:
+            - code-network
+    mysql:
+        image: mysql:latest
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+        networks:
+            - code-network
+
+networks:
+    code-network:
+        driver: bridge
