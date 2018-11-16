@@ -12,7 +12,7 @@ services:
         networks:
             - code-network
     php:
-        image: php:fpm
+        image: php:7.2-fpm
         volumes:
             - ./code:/code
             - ./php.ini:/usr/local/etc/php/php.ini

@@ -11,8 +11,6 @@
 ## v3版本
 这个版本也是在v1基础的增强，它通知command的方式来安装PHP扩展， 未经过实际测试。
 
-
-
 ## 安装
 
 docker-compose up -d
