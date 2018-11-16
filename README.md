@@ -41,3 +41,5 @@ docker stats 监控容器状态
 ## 问题
 
 composer遇到exited with code 127的时候，需要检查你是否是已root用户运行，是否是内存不够导致的，可以使用docker stats监控进程状态，如果内存不够就添加虚拟内存来解决。
+
+`docker-compose up`在第一次运行完之后，下次再运行的话如果你更改了dockerfile的配置，需要把第一次生成的镜像删除，否则该镜像不会更新，并按照之前的镜像生成container。所以如果你更新了dockerfile，需要把之前生成的镜像删掉再重新运行`docker-compose up`
