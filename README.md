@@ -1,5 +1,18 @@
 # 用docker-compose 搭建PHP开发环境
 
+## v1版本
+这个版本只包含简单的PHP环境，不包括安装扩展。
+
+## v2版本
+这个版本包含了PHP一些基本的扩展安装，它通过引入另一个dockerfile的方式来安装PHP扩展
+
+可参考docker官方文档 [https://docs.docker.com/samples/library/php/#how-to-install-more-php-extensions](https://docs.docker.com/samples/library/php/#how-to-install-more-php-extensions)
+
+## v3版本
+这个版本也是在v1基础的增强，它通知command的方式来安装PHP扩展， 未经过实际测试。
+
+
+
 ## 安装
 
 docker-compose up -d
